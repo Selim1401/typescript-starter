@@ -1,0 +1,15 @@
+import test from 'ava';
+import { sum, multiply, isEven } from './utils';
+
+test('sum should add two numbers', (t) => {
+  t.is(sum(2, 3), 5);
+});
+
+test('multiply should multiply two numbers', (t) => {
+  t.is(multiply(4, 5), 20);
+});
+
+test('isEven should return true for even numbers', (t) => {
+  t.true(isEven(4));
+  t.false(isEven(5));
+});

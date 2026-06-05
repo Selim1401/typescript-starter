@@ -1,0 +1,26 @@
+import test from 'ava';
+import { sum, multiply, isEven } from './utils';
+
+test('sum should add two numbers', (t) => {
+  t.is(sum(2, 3), 5);
+  t.is(sum(-1, 1), 0);
+  t.is(sum(0, 0), 0);
+});
+
+test('multiply should multiply two numbers', (t) => {
+  t.is(multiply(4, 5), 20);
+  t.is(multiply(-2, 3), -6);
+  t.is(multiply(0, 100), 0);
+});
+
+test('isEven should return true for even numbers', (t) => {
+  t.true(isEven(4));
+  t.true(isEven(0));
+  t.true(isEven(-2));
+});
+
+test('isEven should return false for odd numbers', (t) => {
+  t.false(isEven(5));
+  t.false(isEven(1));
+  t.false(isEven(-3));
+});
